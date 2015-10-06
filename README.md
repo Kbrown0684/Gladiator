@@ -4,40 +4,43 @@
 Made by Kevin Brown and Eric Krauss
 Written in Python2 with PyGame 10/6/2015
 
-run
-	Bash script that runs the game
-	can be used to automate testing
-	and to include runtime arguments
 
-Main.py
-	Ties the game files together and
-	makes them run in tandem...
-	it does what a main is supposed to
+Files
 
-UI.py
-	Handles user-input and the final
-	output as handed to it by Graphics
+	run -->
+		Bash script that runs the game
+		can be used to automate testing
+		and to include runtime arguments
 
-Graphics.py
-	Takes the arrays from Arena and the
-	output from UI and layers them
-	together before displaying them as
-	symbols/sprites*
+	Main.py -->
+		Ties the game files together and
+		makes them run in tandem...
+		it does what a main is supposed to
 
-Gladiator.py
-	Receptical for stats and equipment
-	for players' gladiators, and it
-	handles combat between gladiators
+	UI.py -->
+		Handles user-input and the final
+		output as handed to it by Graphics
 
-Arena.py
-	Controls the boundaries, environment,
-	and player positions and it handles
-	player movement
+	Graphics.py -->
+		Takes the arrays from Arena and the
+		output from UI and layers them
+		together before displaying them as
+		symbols/sprites*
 
-Referee.py
-	Handles match start, match end
-	conditions, turn order, and
-	random events*
+	Gladiator.py -->
+		Receptical for stats and equipment
+		for players' gladiators, and it
+		handles combat between gladiators
+
+	Arena.py -->
+		Controls the boundaries, environment,
+		and player positions and it handles
+		player movement
+
+	Referee.py -->
+		Handles match start, match end
+		conditions, turn order, and
+		random events*
 
 
 
