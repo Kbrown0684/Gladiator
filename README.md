@@ -4,6 +4,10 @@
 Made by Kevin Brown and Eric Krauss
 Written in Python2 with PyGame 10/6/2015
 
+run
+	Bash script that runs the game
+	can be used to automate testing
+	and to include runtime arguments
 
 Main.py
 	Ties the game files together and
