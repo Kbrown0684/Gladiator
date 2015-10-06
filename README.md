@@ -20,7 +20,7 @@ Graphics.py
 	together before displaying them as
 	symbols/sprites*
 
-Character.py
+Gladiator.py
 	Receptical for stats and equipment
 	for players' gladiators, and it
 	handles combat between gladiators
