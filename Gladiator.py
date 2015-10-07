@@ -18,7 +18,7 @@ class Gladiator:
 
 	##Health tracks the amount of damage a Gladiator 
 	##  can take before perishing.  Health cannot
-	##  be more than maxhealth
+	##  be more than maxHealth
 	__health =	0
 	__maxHealth =	0
 	
@@ -94,7 +94,7 @@ class Gladiator:
 
 	##getWeight
 	##  returns the sum of weight across
-	##  gladiator's equipment
+	##    gladiator's equipment
 	def getWeight(self):
 		outVal = self.equipment["Weapon"][1]
 		outVal += self.equipment["Armor"][1]
@@ -105,6 +105,8 @@ class Gladiator:
 	##  changes the value of health
 	##  if newVal is greater than maxHealth
 	##    sets health to maxHealth
+	##  @param newVal - An int between 0 
+	##    and maxHealth
 	def setHealth(self, newVal):
 		if newVal <= self.maxHealth:
 			self.health = newVal
@@ -112,8 +114,8 @@ class Gladiator:
 			self.health = self.maxHealth
 
 	##setFacing
-	##  changes the value of facing
-	##  to a value between 1 and 4
+	##  changes the value of facing to newVal
+	##  @param newVal - An int between 1 and 4
 	def setFacing(self, newVal):
 		if (newVal <= 4 and newVal >= 1):
 			self.facing = newVal
@@ -123,8 +125,8 @@ class Gladiator:
 
 	##updateMaxHealth
 	##  refreshes maxHealth's value based
-	##  on equipment.  Raises health by
-	##  the difference between the new and old values
+	##    on equipment.  Raises health by
+	##    the difference between the new and old values
 	def updateMaxHealth(self):
 		oldMaxHealth = self.maxHealth
 		self.maxHealth = 10+self.equipment["Armor"][0]
@@ -132,13 +134,13 @@ class Gladiator:
 
 	##updateSpeed
 	##  refreshes speed's value based on
-	##  equipment weight
+	##    equipment weight
 	def updateSpeed(self):
 		self.speed = 10-self.getWeight()
 
 	##updateDistance
 	##  refreshes distance's value based to
-	##  6 - (1/4 equipment weight rounded down)
+	##    6 - (1/4 equipment weight rounded down)
 	def updateDistance(self):
 		newDistance = 6
 		reduction = floor(self.getWeight()/4)
@@ -157,12 +159,28 @@ class Gladiator:
 		else:
 			return True
 
+
+	##setWeapon
+	##  Changes the values of the gladiator's weapon
+	##  @param damage - An int greater than 0
+	##  @param weight - An int greater than 0
+	##  @param name - A string not equal to "Nothing"
+	##
+	##  TODO:  Replace params with alias of Weapon obj
 	def setWeapon(self, damage, weight, name):
 		target = self.equipment["Weapon"]
 		target[0] = damage
 		target[1] = weight
 		target[2] = name
 
+
+	##setArmor
+	##  Changes the values of the gladiator's weapon
+	##  @param healthBonus - An int greater than 0
+	##  @param weight - An int greater than 0
+	##  @param name - A string not equal to "Nothing"
+	##
+	##  TODO:  Replace params with alias of Armor obj
 	def setArmor(self, healthBonus, weight, name):
 		target = self.equipment["Armor"]
 		target[0] = healthBonus
@@ -170,9 +188,15 @@ class Gladiator:
 		target[2] = name
 
 
+	##takeDamage
+	##  reduces gladiator's health by dmg
+	##  @param dmg - an int greater than 0
 	def takeDamage(self, dmg):
-		self.health -= dmg
+		self.setHealth(self.getHealth - dmg)
 
+	##attack
+	##  calls the target's takeDamage method
+	##  @param target - A gladiator object
 	def attack(self, target):
 		target.takeDamage(self.getDamage())
 		return

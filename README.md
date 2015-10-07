@@ -52,6 +52,12 @@ Styling
 		##If you go into another subject, write two 
 		##  pounds and a newline and then start the
 		##  new comment
+		##
+		##Parameters are described with the following
+		##  @param - Description
+		##
+		##TODO:  is used to announce plans for changes
+		##  or additions to the function/method/class
 
 	Functions -->
 		Keep functions short and sweet, calling other
@@ -64,4 +70,3 @@ Styling
 		functions, methods, and class variables must
 		have commenting to describe their purpose
 
-*Optional idea
