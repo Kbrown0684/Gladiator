@@ -42,7 +42,26 @@ Files
 		conditions, turn order, and
 		random events*
 
+Styling
 
+	Commenting -->	
+		##Comments start with two pound symbols and
+		##  continue with two pound symbols and two
+		##  spaces as long as it's about one subject
+		##
+		##If you go into another subject, write two 
+		##  pounds and a newline and then start the
+		##  new comment
 
+	Functions -->
+		Keep functions short and sweet, calling other
+		functions in order to break up the required
+		tasks and make the necessary documentation for
+		that function small
+
+	Documentation -->
+		Every file is described in this README, all
+		functions, methods, and class variables must
+		have commenting to describe their purpose
 
 *Optional idea
