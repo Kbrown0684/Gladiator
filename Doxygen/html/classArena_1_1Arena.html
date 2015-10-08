@@ -101,6 +101,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a86954a39b5b1ab78ebed13a4bee93179"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArena_1_1Arena.html#a86954a39b5b1ab78ebed13a4bee93179">__init__</a> (self, dimensions, GladiatorTeamA, GladiatorTeamB)</td></tr>
 <tr class="memdesc:a86954a39b5b1ab78ebed13a4bee93179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor initializes the <a class="el" href="classArena_1_1Arena.html" title="Arena The Arena class handles all movement and positioning within the gamespace as well as tracking b...">Arena</a> class.  <a href="#a86954a39b5b1ab78ebed13a4bee93179">More...</a><br /></td></tr>
 <tr class="separator:a86954a39b5b1ab78ebed13a4bee93179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b533162634c7097fc101b0fafa906f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArena_1_1Arena.html#a52b533162634c7097fc101b0fafa906f">isCollision</a> (self, position)</td></tr>
+<tr class="memdesc:a52b533162634c7097fc101b0fafa906f"><td class="mdescLeft">&#160;</td><td class="mdescRight">isCollision Returns a bool indicating the presence of a boundary at position  <a href="#a52b533162634c7097fc101b0fafa906f">More...</a><br /></td></tr>
+<tr class="separator:a52b533162634c7097fc101b0fafa906f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classArena_1_1Arena.html" title="Arena The Arena class handles all movement and positioning within the gamespace as well as tracking b...">Arena</a> The <a class="el" href="classArena_1_1Arena.html" title="Arena The Arena class handles all movement and positioning within the gamespace as well as tracking b...">Arena</a> class handles all movement and positioning within the gamespace as well as tracking boundaries and objects in the environment. </p>
@@ -144,8 +147,43 @@ Public Member Functions</h2></td></tr>
 <p>Constructor initializes the <a class="el" href="classArena_1_1Arena.html" title="Arena The Arena class handles all movement and positioning within the gamespace as well as tracking b...">Arena</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dimensions</td><td>- A tuple with a row and a col variable in positions 0 and 1 respectfullt </td></tr>
-    <tr><td class="paramname">GladiatorTeamAorB</td><td>- a list of Gladiator objects all with the same team as returned by getTeam </td></tr>
+    <tr><td class="paramname">dimensions</td><td>- A tuple with a row and a col variable in positions 0 and 1 respectively</td></tr>
+    <tr><td class="paramname">GladiatorTeamA/B</td><td>- a list of Gladiator objects all with the same team as returned by getTeam </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a52b533162634c7097fc101b0fafa906f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Arena.Arena.isCollision </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>isCollision Returns a bool indicating the presence of a boundary at position </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- A tuple with row and col as values in the first and second index respectively </td></tr>
   </table>
   </dd>
 </dl>

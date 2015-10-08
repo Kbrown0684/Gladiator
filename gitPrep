@@ -1,0 +1,13 @@
+#!/bin/bash
+
+./updateDoc
+git add .
+
+if [$* -gt 0]
+then
+	git commit -m $1
+else
+	git commit
+fi
+
+git push -u origin master

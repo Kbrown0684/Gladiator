@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['refresh',['refresh',['../classGladiator_1_1Gladiator.html#af0f5f1318d375490b8630a9f25039f50',1,'Gladiator::Gladiator']]]
+  ['iscollision',['isCollision',['../classArena_1_1Arena.html#a52b533162634c7097fc101b0fafa906f',1,'Arena::Arena']]]
 ];

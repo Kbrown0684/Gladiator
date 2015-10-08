@@ -25,16 +25,18 @@ class Arena:
 	##  An array of lists where the first
 	##  index is a Gladiator object and
 	##  the second and third index is a
-	##  row and a col variable respectfully
+	##  row and a col variable respectivelt
 	__gladiators = []
 
 
 	##Constructor
 	##  initializes the Arena class
+	##
 	##  @param dimensions - A tuple with a
 	##    row and a col variable in positions
-	##    0 and 1 respectfullt
-	##  @param GladiatorTeamAorB - a list of
+	##    0 and 1 respectively
+	##
+	##  @param GladiatorTeamA/B - a list of
 	##    Gladiator objects all with the same
 	##    team as returned by getTeam
 	def __init__(self, dimensions, GladiatorTeamA, GladiatorTeamB):
@@ -50,3 +52,16 @@ class Arena:
 
 		for gladiator in GladiatorTeamB:
 			self.gladiators.append([gladiator, -1, -1])
+
+	##isCollision
+	##  Returns a bool indicating the
+	##  presence of a boundary at position
+	##
+	##@param position - A tuple with row
+	##  and col as values in the first
+	##  and second index respectively
+	def isCollision(self, position):
+		row = position[0]
+		col = position[1]
+		return self.boundaries[row][col]
+
