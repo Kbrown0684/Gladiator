@@ -205,7 +205,7 @@ class Gladiator:
 	##  reduces gladiator's health by dmg
 	##  @param dmg - an int greater than 0
 	def takeDamage(self, dmg):
-		self.setHealth(self.getHealth - dmg)
+		self.setHealth(self.getHealth() - dmg)
 
 	##attack
 	##  calls the target's takeDamage method

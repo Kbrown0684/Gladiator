@@ -1,6 +1,6 @@
 from math import floor
 import Gladiator
-
+import Arena
 
 adam= Gladiator.Gladiator()
 adam.name= "Adam"
