@@ -6,5 +6,6 @@ var searchData=
   ['gethealth',['getHealth',['../classGladiator_1_1Gladiator.html#ac7b5a72c5527beb571f029d9b60ad7bb',1,'Gladiator::Gladiator']]],
   ['getspeed',['getSpeed',['../classGladiator_1_1Gladiator.html#ab61a5131b61ba8467c578efac0123d3c',1,'Gladiator::Gladiator']]],
   ['getweight',['getWeight',['../classGladiator_1_1Gladiator.html#a682b3f1fe2adc4cb85604906a8caed48',1,'Gladiator::Gladiator']]],
-  ['gladiator',['Gladiator',['../classGladiator_1_1Gladiator.html',1,'Gladiator']]]
+  ['gladiator',['Gladiator',['../classGladiator_1_1Gladiator.html',1,'Gladiator']]],
+  ['gladiator_20project',['Gladiator Project',['../index.html',1,'']]]
 ];

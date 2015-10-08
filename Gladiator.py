@@ -176,7 +176,7 @@ class Gladiator:
 	##  @param weight - An int greater than 0
 	##  @param name - A string not equal to "Nothing"
 	##
-	##  TODO:  Replace params with alias of Weapon obj
+	##\todo  Replace params with alias of Weapon obj
 	def setWeapon(self, damage, weight, name):
 		target = self.equipment["Weapon"]
 		target[0] = damage
@@ -190,7 +190,7 @@ class Gladiator:
 	##  @param weight - An int greater than 0
 	##  @param name - A string not equal to "Nothing"
 	##
-	##  TODO:  Replace params with alias of Armor obj
+	##\todo  Replace params with alias of Armor obj
 	def setArmor(self, healthBonus, weight, name):
 		target = self.equipment["Armor"]
 		target[0] = healthBonus

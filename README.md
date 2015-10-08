@@ -64,8 +64,9 @@ Styling
 		##Parameters are described with the following
 		##  @param - Description
 		##
-		##TODO:  is used to announce plans for changes
-		##  or additions to the function/method/class
+		##\todo  followed by two spaces is used to 
+		##  announce plans for changes or additions 
+		##  to the function/method/class
 
 	Casing -->
 		variables_are_seperated_by_underscores

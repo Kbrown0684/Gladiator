@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "_agirstu",
   1: "ag",
   2: "_agirstu",
-  3: "r"
+  3: "grt"
 };
 
 var indexSectionNames =

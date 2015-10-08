@@ -2,6 +2,13 @@ from math import floor
 import Gladiator
 import Arena
 
+
+##\mainpage Gladiator Project
+##
+##\section intro_sec Introduction
+##
+##This is why we do documentation, Kevin!
+
 adam= Gladiator.Gladiator()
 adam.name= "Adam"
 adam.team= "Team A"
