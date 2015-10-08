@@ -1,7 +1,8 @@
 from math import floor
 
-##floor is used to round down a float to an integer
-
+##Gladiator
+##  Contains all information necessary for one
+##  gladiator character in the game
 class Gladiator:
 
 	##double underscore, "__", is used to
@@ -40,6 +41,8 @@ class Gladiator:
 	##  Armor is a list with Health, Weight, and Name
 	##  Trinket is a list with a pointer to
 	##    an Object, a Quantity, a Weight, and Name
+	##
+	##TODO:  Update equipment system
 	__equipment =	{}
 
 	
@@ -75,20 +78,30 @@ class Gladiator:
 		return outString
 
 
-	##getMethods
-	##  return information
+	##getHealth
+	##  returns health value
 	def getHealth(self):
 		return self.health
-
+	
+	##getSpeed
+	##  returns speed value
 	def getSpeed(self):
 		return self.speed
 	
+	##getDistance
+	##  returns distance value
 	def getDistance(self):
 		return self.distance
 
+	##getFacing
+	##  returns facing value
 	def getFacing(self):
 		return self.facing
-
+	
+	##getDamage
+	##  returns weapon damage
+	##
+	##TODO:  update equipment system to objects
 	def getDamage(self):
 		return self.equipment["Weapon"][0]
 

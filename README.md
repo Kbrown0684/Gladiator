@@ -12,6 +12,14 @@ Files
 		can be used to automate testing
 		and to include runtime arguments
 
+	updateDoc -->
+		Updates the Doxygen documentation's
+		HTML files
+
+	readDoc -->
+		Opens the Doxygen documentation's
+		HTML files in Chromium
+
 	Main.py -->
 		Ties the game files together and
 		makes them run in tandem...
@@ -70,3 +78,11 @@ Styling
 		functions, methods, and class variables must
 		have commenting to describe their purpose
 
+	Doxygen -->
+		Doxygen is a program that evaluates the code
+		and the documentation therein and creates a
+		series of HTML files that can be viewed in a
+		web browser in order to access in depth
+		documentation of all code in the project
+		complete with search functionality.  This
+		is why we go to such lengths in documenting

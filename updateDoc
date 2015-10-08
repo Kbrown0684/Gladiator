@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rmdir Doxygen/html
+rmdir Doxygen/latex
+doxygen Doxygen/Doxy*.xml
+mv html Doxygen/html
+mv latex Doxygen/latex
+rmdir html
+rmdir latex
