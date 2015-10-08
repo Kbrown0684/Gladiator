@@ -5,9 +5,6 @@ from math import floor
 ##  gladiator character in the game
 class Gladiator:
 
-	##double underscore, "__", is used to
-	##  declare private variables and methods
-
 
 	##Name is the gladiator's name
 	##  duh

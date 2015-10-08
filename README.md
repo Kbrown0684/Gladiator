@@ -67,6 +67,15 @@ Styling
 		##TODO:  is used to announce plans for changes
 		##  or additions to the function/method/class
 
+	Casing -->
+		variables_are_seperated_by_underscores
+		methodsUseCamelCasingWithTheFirstLetterLowercase
+		ClassNamesHaveTheFirstLetterUppercase
+		double underscore, "__", is used to
+		declare private variables and methods
+
+
+
 	Functions -->
 		Keep functions short and sweet, calling other
 		functions in order to break up the required
