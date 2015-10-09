@@ -1,5 +1,6 @@
 from Gladiator import Gladiator
-
+from math import floor
+from copy import deepcopy
 
 ##Arena
 ##  The Arena class handles all movement and
@@ -40,6 +41,10 @@ class Arena:
 	##    Gladiator objects all with the same
 	##    team as returned by getTeam
 	def __init__(self, dimensions, GladiatorTeamA, GladiatorTeamB):
+		self.boundaries = []
+		self.environment= []
+		self.gladiators = []
+
 		for row in range(dimensions[0]):
 			self.boundaries.append([])
 			self.environment.append([])
@@ -53,6 +58,9 @@ class Arena:
 		for gladiator in GladiatorTeamB:
 			self.gladiators.append([gladiator, -1, -1])
 
+		print(self.gladiators)
+		self.gladiators = self.getOrder()
+
 	##isCollision
 	##  Returns a bool indicating the
 	##  presence of a boundary at position
@@ -65,3 +73,49 @@ class Arena:
 		col = position[1]
 		return self.boundaries[row][col]
 
+	##sortTeams
+	##  Sorts all Gladiators in the gladiators
+	##  array by speed recursively
+	def sortTeams(self, arrayList):
+		returnList = []
+		if len(arrayList) == 2:
+			speedOne = arrayList[0][0].getSpeed()
+			speedTwo = arrayList[1][0].getSpeed()
+			if speedOne >= speedTwo:
+				returnList.append(arrayList[0])
+				returnList.append(arrayList[1])
+				return returnList
+			else:
+				returnList.append(arrayList[1])
+				returnList.append(arrayList[0])
+				return returnList
+		
+		if len(arrayList) < 3:
+			return arrayList
+		else:
+			splitPoint = int(floor(len(arrayList)/2))
+			TeamA =	self.sortTeams(arrayList[:splitPoint])
+			TeamB = self.sortTeams(arrayList[splitPoint:])
+
+			while (len(TeamA) > 0 and len(TeamB) > 0):
+				speedA = TeamA[0][0].getSpeed()
+				speedB = TeamB[0][0].getSpeed()
+				if speedA >= speedB:
+					returnList.append(TeamA.pop(0))
+				if speedB >= speedA:
+					returnList.append(TeamB.pop(0))
+
+			return returnList
+
+	##getOrder
+	##  returns the Gladiators in order
+	##  of their return by sortTeams
+	def getOrder(self):
+		length = len(self.gladiators)
+		inOrder = self.gladiators[:]
+		outOrder = self.sortTeams(inOrder)
+		if (len(outOrder) != length):
+			print("We lost "+str(length-len(outOrder))+" gladiators while sorting!!!")
+			return self.gladiators
+		return self.sortTeams(self.gladiators)
+		

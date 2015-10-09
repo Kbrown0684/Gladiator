@@ -75,6 +75,11 @@ class Gladiator:
 		return outString
 
 
+	##getName
+	##  returns Name string
+	def getName(self):
+		return self.name
+
 	##getHealth
 	##  returns health value
 	def getHealth(self):

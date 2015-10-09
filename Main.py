@@ -9,27 +9,49 @@ import Arena
 ##
 ##This is why we do documentation, Kevin!
 
+
+
 adam= Gladiator.Gladiator()
 adam.name= "Adam"
 adam.team= "Team A"
-adam.setWeapon(5,4,"Greatsword")
-adam.setArmor(6,4,"Breastplate")
+adam.setWeapon(5,1,"Greatsword")
+adam.setArmor(6,1,"Breastplate")
 adam.refresh()
 
 bob = Gladiator.Gladiator()
 bob.name = "Bob"
-bob.team = "Team B"
-bob.setWeapon(3, 1, "Shortsword")
-bob.setArmor(4, 1, "Leather")
+bob.team = "Team A"
+bob.setWeapon(3, 3, "Shortsword")
+bob.setArmor(4, 3, "Leather")
 bob.refresh()
 
+carl= Gladiator.Gladiator()
+carl.name= "Carl"
+carl.team= "Team B"
+carl.setWeapon(5,2,"Greatsword")
+carl.setArmor(6,2,"Breastplate")
+carl.refresh()
 
-##Test attacking
-adam.attack(bob)
-bob.attack(adam)
+dave= Gladiator.Gladiator()
+dave.name= "Dave"
+dave.team= "Team B"
+dave.setWeapon(5,4,"Greatsword")
+dave.setArmor(6,4,"Breastplate")
+dave.refresh()
+
+theArena = Arena.Arena((10,10), (adam, bob), (carl, dave))
 
 print (adam)
 print("")
 print (bob)
 print("")
+print (carl)
+print("")
+print(dave)
+print("")
 
+print(theArena.gladiators)
+turnOrder = theArena.gladiators
+for gladiator in turnOrder:
+	print(gladiator[0].getName())
+print("")
