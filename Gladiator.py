@@ -32,6 +32,12 @@ class Gladiator:
 	##  the only acceptable values
 	__facing =	1
 
+	##Row and Col tracks the position of a
+	##  Gladiator within the Arena
+	__row =		-1
+	__col =		-1
+
+
 	##Equipment is a map with the following
 	##  keys:  Weapon, Armor, Trinket*
 	##  Weapon is a list with Damage, Weight, and Name
@@ -39,7 +45,7 @@ class Gladiator:
 	##  Trinket is a list with a pointer to
 	##    an Object, a Quantity, a Weight, and Name
 	##
-	##TODO:  Update equipment system
+	##/todo  Update equipment system
 	__equipment =	{}
 
 	
@@ -55,7 +61,9 @@ class Gladiator:
 		self.distance = 5
 		
 		self.facing =	1
-		
+		self.row =	-1
+		self.col =	-1		
+
 		self.equipment = {
 			"Weapon":[0,0,"Nothing"],
 			"Armor":[0,0,"Nothing"],
@@ -100,6 +108,12 @@ class Gladiator:
 	def getFacing(self):
 		return self.facing
 	
+	##getPosition
+	##  returns Row and Col
+	##  in a Tuple in that order
+	def getPosition(self):
+		return (self.row, self.col)
+
 	##getDamage
 	##  returns weapon damage
 	##

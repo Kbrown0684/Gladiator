@@ -50,8 +50,7 @@ print("")
 print(dave)
 print("")
 
-print(theArena.gladiators)
 turnOrder = theArena.gladiators
 for gladiator in turnOrder:
-	print(gladiator[0].getName())
+	print(gladiator.getName())
 print("")

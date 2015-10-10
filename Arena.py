@@ -23,10 +23,7 @@ class Arena:
 	__environment= []
 
 	##gladiators
-	##  An array of lists where the first
-	##  index is a Gladiator object and
-	##  the second and third index is a
-	##  row and a col variable respectivelt
+	##  An array of Gladiator objects
 	__gladiators = []
 
 
@@ -53,12 +50,11 @@ class Arena:
 				self.environment[row].append(False)
 
 		for gladiator in GladiatorTeamA:
-			self.gladiators.append([gladiator, -1, -1])
+			self.gladiators.append(gladiator)
 
 		for gladiator in GladiatorTeamB:
-			self.gladiators.append([gladiator, -1, -1])
+			self.gladiators.append(gladiator)
 
-		print(self.gladiators)
 		self.gladiators = self.getOrder()
 
 	##isCollision
@@ -79,8 +75,8 @@ class Arena:
 	def sortTeams(self, arrayList):
 		returnList = []
 		if len(arrayList) == 2:
-			speedOne = arrayList[0][0].getSpeed()
-			speedTwo = arrayList[1][0].getSpeed()
+			speedOne = arrayList[0].getSpeed()
+			speedTwo = arrayList[1].getSpeed()
 			if speedOne >= speedTwo:
 				returnList.append(arrayList[0])
 				returnList.append(arrayList[1])
@@ -98,12 +94,17 @@ class Arena:
 			TeamB = self.sortTeams(arrayList[splitPoint:])
 
 			while (len(TeamA) > 0 and len(TeamB) > 0):
-				speedA = TeamA[0][0].getSpeed()
-				speedB = TeamB[0][0].getSpeed()
+				speedA = TeamA[0].getSpeed()
+				speedB = TeamB[0].getSpeed()
 				if speedA >= speedB:
 					returnList.append(TeamA.pop(0))
 				if speedB >= speedA:
 					returnList.append(TeamB.pop(0))
+
+			while (len(TeamA) > 0):
+				returnList.append(TeamA.pop(0))
+			while (len(TeamB) > 0):
+				returnList.append(TeamB.pop(0))
 
 			return returnList
 
