@@ -8,7 +8,7 @@ import Arena
 ##\section intro_sec Introduction
 ##
 ##This is why we do documentation, Kevin!
-
+##additional witty remark
 
 
 adam= Gladiator.Gladiator()
