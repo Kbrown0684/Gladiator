@@ -7,7 +7,7 @@ class Gladiator:
 
 
 	##Name is the gladiator's name
-	##  duh
+	##  obviously...
 	__name =	""
 
 	##Team is the team the gladiator can belong to
