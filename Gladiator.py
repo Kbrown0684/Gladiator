@@ -117,7 +117,7 @@ class Gladiator:
 	##getDamage
 	##  returns weapon damage
 	##
-	##TODO:  update equipment system to objects
+	##\todo  update equipment system to objects
 	def getDamage(self):
 		return self.equipment["Weapon"][0]
 
